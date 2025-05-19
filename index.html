@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Memory Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Game logic -->
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <header id="status-header">
+    <div class="controls">
+      <select id="difficulty">
+        <option value="" disabled selected>Difficulty</option>
+        <option value="3">Easy (3 pairs)</option>
+        <option value="6">Medium (6 pairs)</option>
+        <option value="9">Hard (9 pairs)</option>
+      </select>
+      <button id="start-btn">Start</button>
+      <button id="reset-btn">Reset</button>
+      <button id="theme-toggle">Toggle Dark Mode</button>
+      <button id="powerup-btn">Reveal Cards</button>
+    </div>
+    <div class="stats">
+      <span id="clicks">Clicks: 0</span>
+      <span id="pairs-left">Pairs Left: 0</span>
+      <span id="matched">Matched: 0</span>
+      <span id="total-pairs">Total Pairs: 0</span>
+      <span id="timer">Time: 00:00</span>
+    </div>
+  </header>
+
+  <main>
+    <div id="game_grid"></div>
+  </main>
+
+  <!-- custom modal overlay -->
+  <div id="modal-overlay" class="hidden">
+    <div id="modal-box">
+      <p id="modal-message"></p>
+      <button id="modal-ok">OK</button>
+    </div>
+  </div>
+</body>
+
+</html>
